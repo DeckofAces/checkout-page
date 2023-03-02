@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+:root {
+  --grey-100: #f2f2f2;
+  --grey-200: #e0e0e0;
+  --grey-300: #bdbdbd;
+  --grey-400: #828282;
+  --grey-500: #4e5150;
+  --grey-600: #333333;
+  --orange: #f2994a;
+}
+
+html {
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 80em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 20;
+}
+
+body {
+  width: 95%;
+  margin: 0 auto;
+}
+@media (min-width: 64em) {
+  body {
+    width: 75%;
+  }
+}
+body > header {
+  margin-top: 8%;
+  margin-bottom: 6%;
+}
+@media (min-width: 64em) {
+  body > header {
+    margin: 5% 0;
+  }
+}
+body > header h5 {
+  color: var(--grey-500);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+@media (min-width: 64em) {
+  body > header h5 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 64em) {
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+#cart {
+  background-color: var(--grey-100);
+  padding: 6%;
+  border-radius: 0.75rem;
+  margin-bottom: 10%;
+}
+#cart .product {
+  display: flex;
+  gap: 5%;
+  margin-bottom: 10%;
+}
+#cart .product img {
+  width: 40%;
+  border-radius: 0.8125rem;
+}
+#cart .product > div header {
+  margin-bottom: 5%;
+}
+#cart .product > div header h6 {
+  font-size: 0.75rem;
+  color: var(--grey-500);
+}
+#cart .product > div section {
+  height: 82%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#cart .product > div .price > p {
+  font-size: 0.875rem;
+  color: var(--orange);
+}
+#cart .product > div .price p span {
+  font-size: 0.625rem;
+  color: var(--grey-500);
+  text-decoration: line-through;
+  margin-left: 7%;
+}
+#cart .product > div .quantity {
+  width: 70%;
+  height: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--grey-400);
+  border-radius: 0.75rem;
+  padding: 10% 7%;
+}
+#cart .product > div .quantity span {
+  background-color: var(--grey-200);
+  width: 1.25rem;
+  height: 1.25rem;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+#cart .product > div .quantity input {
+  width: 25%;
+  background: none;
+  border: none;
+  text-align: center;
+}
+#cart .cost div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--grey-300);
+  font-size: 0.875rem;
+  color: var(--grey-600);
+  padding: 5% 0;
+}
+#cart .cost div + div {
+  padding-bottom: 0;
+}
+
+form section header {
+  font-size: 0.875rem;
+  color: var(--grey-600);
+  margin-bottom: 4%;
+}
+@media (min-width: 64em) {
+  form section header {
+    font-size: 1.125rem;
+  }
+}
+form section label {
+  display: block;
+  font-size: 0.625rem;
+  color: var(--grey-500);
+  margin-bottom: 5%;
+}
+form section label div {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 0.3125rem;
+  border: 1px solid var(--grey-400);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  color: var(--grey-400);
+}
+form section label input {
+  border: none;
+  background: none;
+  margin-left: 2%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  outline: none;
+}
+form section label input:hover {
+  outline: none;
+}
+form section label input[type=checkbox] {
+  margin-right: 2%;
+}
+form section .country_and_postal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+form section .country_and_postal select {
+  width: 90%;
+  height: 2.5rem;
+  margin-top: 0.3125rem;
+  border: 1px solid var(--grey-400);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  color: var(--grey-400);
+  padding: 0 2%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  outline: none;
+}
+form section .country_and_postal label {
+  width: 50%;
+}
+form section .country_and_postal label div {
+  padding-left: 3%;
+}
+form section .save_check {
+  display: flex;
+  align-items: center;
+}
+form .submit {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 5vh;
+}
+form .submit button {
+  background-color: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  width: 42vw;
+  height: 7vh;
+}
+
+footer {
+  margin: 0 auto 2vh;
+}
+footer p {
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--grey-300);
+}
+footer p span {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=styles.css.map */

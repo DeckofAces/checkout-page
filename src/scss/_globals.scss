@@ -1,0 +1,49 @@
+@use 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+:root {
+	--grey-100: #f2f2f2;
+	--grey-200: #e0e0e0;
+	--grey-300: #bdbdbd;
+	--grey-400: #828282;
+	--grey-500: #4e5150;
+	--grey-600: #333333;
+	--orange: #f2994a;
+}
+
+html {
+	font-size: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background-color: #fff;
+}
+
+a,
+a:visited,
+a:hover {
+	text-decoration: none;
+}
+
+// Visibility
+.hide-for-mobile {
+	// hide for tablet and mobile devices
+	@include mixins.breakpoint-down(medium) {
+		display: none;
+	}
+}
+
+.hide-for-desktop {
+	// hide for desktop viewport widths
+	@include mixins.breakpoint-up(large) {
+		display: none;
+	}
+}
