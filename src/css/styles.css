@@ -79,6 +79,7 @@ body > header h5 {
   main {
     display: flex;
     flex-direction: row-reverse;
+    gap: 10%;
   }
 }
 
@@ -233,6 +234,12 @@ form .submit {
   justify-content: end;
   margin-bottom: 5vh;
 }
+@media (min-width: 64em) {
+  form .submit {
+    float: right;
+    max-width: 40%;
+  }
+}
 form .submit button {
   background-color: var(--orange);
   color: #fff;
@@ -240,6 +247,12 @@ form .submit button {
   border-radius: 0.75rem;
   width: 42vw;
   height: 7vh;
+}
+
+@media (min-width: 64em) {
+  .contact_and_shipping {
+    max-width: 45%;
+  }
 }
 
 footer {

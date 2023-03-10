@@ -38,6 +38,7 @@ main {
 	@include mixins.breakpoint-up(medium) {
 		display: flex;
 		flex-direction: row-reverse;
+		gap: 10%;
 	}
 }
 
@@ -224,6 +225,11 @@ form {
 		justify-content: end;
 		margin-bottom: 5vh;
 
+		@include mixins.breakpoint-up(medium) {
+			float: right;
+			max-width: 40%;
+		}
+
 		button {
 			background-color: var(--orange);
 			color: #fff;
@@ -232,6 +238,12 @@ form {
 			width: 42vw;
 			height: 7vh;
 		}
+	}
+}
+
+.contact_and_shipping {
+	@include mixins.breakpoint-up(medium) {
+		max-width: 45%;
 	}
 }
 
